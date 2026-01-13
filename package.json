@@ -30,6 +30,8 @@
     "@nestjs/swagger": "11.0.6",
     "agenda": "5.0.0",
     "axios": "1.8.3",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.3",
     "dotenv": "16.4.7",
     "fastify": "5.2.1",
     "helmet": "8.1.0",
