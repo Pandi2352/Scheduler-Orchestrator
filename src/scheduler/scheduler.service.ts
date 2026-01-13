@@ -134,13 +134,21 @@ export class SchedulerService implements OnModuleInit, OnModuleDestroy {
             // Create a job with the specified data and callback URL
             const job = this.agenda.create('orchestrator_cron', { callback_url: callbackUrl, data });
 
-            job.repeatEvery(cronTime, {
+            const options: any = {
                 timezone: time_zone,
                 skipImmediate: false,
-                startDate: new Date(cron_schedule_dto.start_date),
-                endDate: new Date(cron_schedule_dto.end_date),
                 cron: true
-            });
+            };
+
+            if (cron_schedule_dto.start_date) {
+                options.startDate = new Date(cron_schedule_dto.start_date);
+            }
+
+            if (cron_schedule_dto.end_date) {
+                options.endDate = new Date(cron_schedule_dto.end_date);
+            }
+
+            job.repeatEvery(cronTime, options);
 
             // Save the job
             await job.save();

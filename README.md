@@ -23,6 +23,10 @@
         <img src="https://img.shields.io/badge/fastify-%23000000.svg?style=for-the-badge&logo=fastify&logoColor=white" alt="Fastify">
     </a>
   </p>
+  
+  <h3>
+    <a href="https://linguistic-eolanda-bose-10558853.koyeb.app/api" target="_blank">🔗 Live Demo (Swagger UI)</a>
+  </h3>
 </div>
 
 ---
