@@ -59,7 +59,6 @@ Upon execution, tasks trigger external **Webhooks** (HTTP POST callbacks), allow
 ```bash
 /
 ├── .env                  # Environment configuration
-├── render.yaml           # ☁️ Render Deployment Config
 ├── src/
 │   ├── app.module.ts     # Root module
 │   ├── main.ts           # Application entry point
@@ -70,13 +69,12 @@ Upon execution, tasks trigger external **Webhooks** (HTTP POST callbacks), allow
 └── test/
 ```
 
-## ☁️ Deployment
 
-We have included a `render.yaml` blueprint for easy deployment on **Render**.
+## ⚡ CI/CD
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+This project uses **GitHub Actions** for continuous integration. Every push to `main` triggers a workflow that installs dependencies, builds the project, and runs tests to ensure stability.
 
-For detailed instructions, read the [**Deployment Guide**](./DEPLOYMENT.md).
+[![CI Status](https://github.com/Pandi2352/Scheduler-Orchestrator/actions/workflows/ci.yml/badge.svg)](https://github.com/Pandi2352/Scheduler-Orchestrator/actions)
 
 ## 🔌 API Endpoints
 
