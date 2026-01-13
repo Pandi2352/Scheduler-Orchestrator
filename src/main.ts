@@ -60,7 +60,9 @@ async function bootstrap() {
 
     SwaggerModule.setup('api', app, document);
 
-    await app.listen(Number(process.env.CUSTOM_SERVER_PORT) || 3000, '0.0.0.0');
+    const port = Number(process.env.PORT) || Number(process.env.CUSTOM_SERVER_PORT) || 3000;
+    await app.listen(port, '0.0.0.0');
+    console.log(`Application is running on: ${await app.getUrl()}`);
   }
   catch (error) {
     console.error(error);
