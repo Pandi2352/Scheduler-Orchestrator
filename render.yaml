@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: scheduler-orchestrator
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_VERSION
+        value: 18.16.0
+      - key: MONGO_CONNECTION_STRING
+        sync: false
+      - key: CUSTOM_SERVER_PORT
+        value: 10000
