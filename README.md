@@ -130,7 +130,7 @@ The service exposes a RESTful API under the base path `/scheduler`.
     ```
 
 5.  **Explore the API:**
-    Visit `http://localhost:3000/api` to see the Swagger documentation.
+    Visit **[Live Swagger UI](https://linguistic-eolanda-bose-10558853.koyeb.app/api)** or `http://localhost:3000/api` (Local) to see the Swagger documentation.
 
 ## 📄 License
 
